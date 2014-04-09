@@ -21,22 +21,31 @@ Route::get('/checkout', function() {
 });
 
 Route::post('/process-checkout', function() {
-    // Set your secret key: remember to change this to your live secret key in production
-    // See your keys here https://manage.stripe.com/account
-    Stripe::setApiKey("sk_test_3OUTh5ZtMnGAVXw0VWBfw915");
+
+    // Use the config for the stripe secret key
+    Stripe::setApiKey(Config::get('stripe.stripe.secret'));
 
     // Get the credit card details submitted by the form
-    $token = $_POST['stripeToken'];
+    $token = Input::get('stripeToken');
 
     // Create the charge on Stripe's servers - this will charge the user's card
     try {
         $charge = Stripe_Charge::create(array(
-                "amount" => 1000, // amount in cents, again
+                "amount" => 2000, // amount in cents
                 "currency" => "usd",
-                "card" => $token,
-                "description" => "payinguser@example.com")
+                "card"  => $token,
+                "description" => 'Charge for my product')
         );
+
     } catch(Stripe_CardError $e) {
+        $e_json = $e->getJsonBody();
+        $error = $e_json['error'];
         // The card has been declined
+        // redirect back to checkout page
+        return Redirect::to('pay')
+            ->withInput()->with('stripe_errors',$error['message']);
     }
+    // Maybe add an entry to your DB that the charge was successful, or at least Log the charge or errors
+    // Stripe charge was successful, continue by redirecting to a page with a thank you message
+    return Redirect::to('/success');
 });
