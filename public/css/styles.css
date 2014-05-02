@@ -1,0 +1,41 @@
+body {
+    background-color: lightgray;
+}
+.wrapper{
+    background-color: #ffffff;
+    padding-top:10px;
+    padding-bottom: 30px;
+    /*padding: 10px;*/
+}
+.header {
+    /*border-bottom: 3px solid gray;*/
+}
+#login-wrapper {
+    width: 300px;
+    margin: 10 auto;
+}
+.navbar {
+
+}
+
+.order-box {
+    border: 2px solid #969696;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.order-box .heading {
+    font-weight: bold;
+    font-size: 20px;
+    color: mediumpurple;
+    border-bottom: 1px solid #969696;
+}
+
+.single-order {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.total-box {
+    background-color:lightgoldenrodyellow;
+    padding-top:20px;
+    padding-bottom:20px;
+}
