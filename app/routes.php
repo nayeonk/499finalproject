@@ -26,24 +26,12 @@ Route::get('/admin', function() {
 
 Route::post('/login-process', 'AdminController@processLogin');
 
-Route::get('/admin/dashboard', function() {
-    if (Auth::check()) {
-        $workshops = Workshop::with('location', 'speaker', 'day', 'time', 'type')->get();
-        $orders = Order::All();
-
-
-        return View::make('admin/dashboard', [
-            'workshops'=>$workshops
-        ]);
-    }
-    else {
-        return Redirect::to('admin');
-    }
-
-});
+Route::get('/admin/dashboard', 'AdminController@showOrders');
 
 Route::get('/admin/orders', function() {
     if (Auth::check()) {
+
+
         $orders = Order::with('workshop')->get();
 
         //dd($orders);
@@ -85,6 +73,7 @@ Route::get('/admin/add-workshop', function() {
 });
 
 Route::post('add-workshop-process', function() {
+
     $validation = Workshop::validate(Input::all());
 
     if($validation->passes()) {

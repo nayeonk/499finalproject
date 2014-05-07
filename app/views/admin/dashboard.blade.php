@@ -24,8 +24,10 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <strong>Total Orders: </strong>
-                        <strong>Total Revenue: </strong>
+                        <div style="margin-top:20px; padding-top:10px; padding-bottom:10px; background-color:lightgoldenrodyellow;">
+                            <strong>Total Orders: </strong> {{$totalPurchased}} <br/>
+                            <strong>Total Revenue: </strong> ${{$revenue}}
+                        </div>
                         <h3>All current workshops</h3>
                         <table border="0" class="table table-striped table-hover">
                             <tr>

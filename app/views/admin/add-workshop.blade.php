@@ -25,6 +25,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h2>Add a workshop</h2>
+                            <p style="color:red">{{ $errors->first('title') }}</p>
+                            <p style="color:red">{{ $errors->first('type') }}</p>
+                            <p style="color:red">{{ $errors->first('speaker') }}</p>
+                            <p style="color:red">{{ $errors->first('location') }}</p>
+                            <p style="color:red">{{ $errors->first('day') }}</p>
+                            <p style="color:red">{{ $errors->first('time') }}</p>
+                            <p style="color:red">{{ $errors->first('price') }}</p>
                             <form action="<?php echo url('add-workshop-process') ?>" method="post">
                                 Title: <input type="text" name="title"/>
                                 Type: <select name="type">
@@ -62,6 +69,7 @@
                                     <?php echo Session::get('success') ?>
                                 </p>
                             <?php endif; ?>
+
                         </div>
                     </div>
 

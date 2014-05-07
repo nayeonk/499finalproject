@@ -55,6 +55,51 @@ class AdminController extends BaseController {
             ->with('success', 'User has been successfully added');
     }
 
-    
+    public function calculateRevenue($orders) {
+        $total = 0;
+
+        foreach ($orders as $order) {
+            $total += $order->quantity * 5;
+        }
+
+        return $total;
+    }
+
+    public function calculateTotalPurchased($orders) {
+        $total = 0;
+
+        foreach ($orders as $order) {
+            $total += $order->quantity;
+        }
+
+        return $total;
+
+    }
+
+    public function showOrders() {
+
+        if (Auth::check()) {
+            $workshops = Workshop::with('location', 'speaker', 'day', 'time', 'type')->get();
+            $orders = Order::All();
+
+            $totalPurchased = $this->calculateTotalPurchased($orders);
+
+            $revenue = $this->calculateRevenue($orders);
+
+            return View::make('admin/dashboard', [
+                'workshops'=>$workshops,
+                'revenue'=>$revenue,
+                'totalPurchased'=>$totalPurchased
+            ]);
+        }
+        else {
+            return Redirect::to('admin');
+        }
+
+    }
+
+
+
+
 
 }

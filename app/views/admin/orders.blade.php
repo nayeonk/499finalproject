@@ -24,6 +24,7 @@
 
             <div class="row">
                 <div class="col-md-12">
+
                     <table border="0" class="table table-striped table-hover">
                         <tr>
                             <th>#</th>
