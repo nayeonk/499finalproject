@@ -56,7 +56,7 @@ class WorkshopController extends BaseController {
             }
         }
 
-        $finalTotal = calculateTotal($orders);
+        $finalTotal = $this->calculateTotal($orders);
 
         return View::make('workshops/checkout',[
             'orders' => $orders,

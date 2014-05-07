@@ -26,7 +26,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-5.423077" vertical-offset="981" max-vertical-offset="2431">
+            <state line="75" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-1.5" vertical-offset="1083" max-vertical-offset="2431">
               <folding />
             </state>
           </provider>
@@ -68,10 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkshopController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WorkshopController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/WorkshopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="31" selection-start="530" selection-end="530" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1207">
+            <state line="49" column="28" selection-start="1498" selection-end="1498" vertical-scroll-proportion="1.5836502" vertical-offset="0" max-vertical-offset="1207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workshops.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/workshops.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="16" selection-start="350" selection-end="433" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2074">
               <folding />
             </state>
           </provider>
@@ -86,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-workshop.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="add-workshop.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/add-workshop.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="73" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.74334604" vertical-offset="170" max-vertical-offset="1938">
+            <state line="25" column="47" selection-start="1074" selection-end="1074" vertical-scroll-proportion="-0.0" vertical-offset="425" max-vertical-offset="1938">
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -148,7 +157,6 @@
         <option value="$PROJECT_DIR$/app/views/workshops.blade.php" />
         <option value="$PROJECT_DIR$/app/tests/AddWorkshopTest.php" />
         <option value="$PROJECT_DIR$/app/tests/CalculateTotalTest.php" />
-        <option value="$PROJECT_DIR$/app/controllers/WorkshopController.php" />
         <option value="$PROJECT_DIR$/app/models/User.php" />
         <option value="$PROJECT_DIR$/app/views/admin/login.php" />
         <option value="$PROJECT_DIR$/app/views/admin/add-user.blade.php" />
@@ -158,6 +166,7 @@
         <option value="$PROJECT_DIR$/app/tests/CalculateRevenueTest.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/admin/add-workshop.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/WorkshopController.php" />
       </list>
     </option>
   </component>
@@ -253,6 +262,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="499finalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="499finalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="workshops" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/workshops.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="350" selection-end="433" vertical-scroll-proportion="0.35018727" vertical-offset="0" max-vertical-offset="2074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/ExampleTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="552">
@@ -692,15 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="80" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-3.9230769" vertical-offset="357" max-vertical-offset="1156">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/CalculateTotalTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="57" selection-start="554" selection-end="739" vertical-scroll-proportion="-15.346154" vertical-offset="43" max-vertical-offset="595">
@@ -722,20 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/WorkshopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="530" selection-end="530" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-5.423077" vertical-offset="981" max-vertical-offset="2431">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tests/CalculateRevenueTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="629">
@@ -743,9 +744,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="80" selection-start="1187" selection-end="1187" vertical-scroll-proportion="-3.9230769" vertical-offset="357" max-vertical-offset="1156">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/add-workshop.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="73" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.74334604" vertical-offset="170" max-vertical-offset="1938">
+        <state line="25" column="47" selection-start="1074" selection-end="1074" vertical-scroll-proportion="-0.0" vertical-offset="425" max-vertical-offset="1938">
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -757,6 +767,27 @@
             <element signature="n#style#0;n#input#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#7;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workshops.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="350" selection-end="433" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-1.5" vertical-offset="1083" max-vertical-offset="2431">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/WorkshopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="28" selection-start="1498" selection-end="1498" vertical-scroll-proportion="1.5836502" vertical-offset="0" max-vertical-offset="1207">
+          <folding />
         </state>
       </provider>
     </entry>
