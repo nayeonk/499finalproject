@@ -10,6 +10,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 wrapper">
                 <h2>Admin Login</h2>
+                <?php if (Session::has('errors')) : ?>
+                    <p style="color: green;">
+                        <?php echo Session::get('errors') ?>
+                    </p>
+                <?php endif; ?>
                 <form method="post" action="<?php echo url('login-process') ?>">
                     Username: <input type="text" name="username" /> <br/>
                     Password: <input type="password" name="password" />

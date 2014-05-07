@@ -16,10 +16,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/checkout', function() {
-   return View::make('checkout');
-});
-
 Route::get('/admin', function() {
     if (Session::has('user')) {
         return View::make('admin/dashboard');
@@ -29,6 +25,45 @@ Route::get('/admin', function() {
 });
 
 Route::post('/login-process', 'AdminController@processLogin');
+
+Route::get('/admin/dashboard', function() {
+    if (Auth::check()) {
+        $workshops = Workshop::with('location', 'speaker', 'day', 'time', 'type')->get();
+        $orders = Order::All();
+
+
+        return View::make('admin/dashboard', [
+            'workshops'=>$workshops
+        ]);
+    }
+    else {
+        return Redirect::to('admin');
+    }
+
+});
+
+Route::get('/admin/orders', function() {
+    if (Auth::check()) {
+        $orders = Order::with('workshop')->get();
+
+        //dd($orders);
+
+
+        return View::make('admin/orders', [
+            'orders'=>$orders
+        ]);
+    }
+    else {
+        return Redirect::to('admin');
+    }
+
+});
+
+Route::get('/admin/add-user', function(){
+    return View::make('admin/add-user');
+});
+
+Route::post('/admin/add-user','AdminController@addUser');
 
 Route::get('/admin/add-workshop', function() {
     $locations = Location::all();
@@ -64,9 +99,9 @@ Route::post('add-workshop-process', function() {
         $workshop->save();
 
         return Redirect::to('admin/add-workshop')
-            ->with('success', 'Workshop has been succesfully added');
+            ->with('success', 'Workshop has been successfully added');
     }
-    return Redirect::to('songs/add-workshop')
+    return Redirect::to('admin/add-workshop')
         ->with('errors', $validation->messages());
 
 });

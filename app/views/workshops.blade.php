@@ -9,19 +9,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 wrapper">
+                <div style="text-align: right;"><a href="<?php echo url('admin')?>">Login</a></div>
                 <div class="row">
                     <div class="col-md-12 header">
                         <h3>Workshop Registration</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-8 navbar">
-                        <ul class="nav nav-pills">
-                            <li><a href="#">Checkout</a></li>
-                        </ul>
 
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <p>The following are workshops available for each day of the festival. Please select the number of tickets you would like for each workshop and click continue to continue the checkout process.</p>

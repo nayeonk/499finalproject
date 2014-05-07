@@ -24,6 +24,17 @@ class WorkshopController extends BaseController {
         ]);
     }
 
+    public function calculateTotal($orders) {
+
+        $finalTotal = 0;
+
+        foreach ($orders as $order){
+            $finalTotal += $order->total;
+        }
+
+        return $finalTotal;
+    }
+
     public function checkout() {
 
         $workshops = Workshop::with('speaker')->get();
@@ -44,11 +55,8 @@ class WorkshopController extends BaseController {
                 $orders[] = $order;
             }
         }
-        $finalTotal = 0;
 
-        foreach ($orders as $order){
-            $finalTotal += $order->total;
-        }
+        $finalTotal = calculateTotal($orders);
 
         return View::make('workshops/checkout',[
             'orders' => $orders,
